@@ -20,7 +20,39 @@ namespace PropExample
             }
             else
             {
-                Console.WriteLine("너비와 높이는 자연수로 초기화해주세요!0");
+                Console.WriteLine("너비와 높이는 자연수로 초기화해주세요!");
+            }
+        }
+
+        public int getWidth()
+        {
+            return width;
+        }
+        public int getHeight()
+        {
+            return height;
+        }
+
+        public void setWidtht(int width)
+        {
+            if (height > 0)
+            {
+                this.width = width;
+            }
+            else
+            {
+                Console.WriteLine("너비를 자연수로 초기화해주세요!");
+            }
+        }
+        public void setHeight(int height)
+        {
+            if (height > 0)
+            {
+                this.height = height;
+            }
+            else
+            {
+                Console.WriteLine("높이를 자연수로 초기화해주세요!");
             }
         }
         public int Area() { return width * height; }
