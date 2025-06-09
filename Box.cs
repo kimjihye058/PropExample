@@ -1,60 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace PropExample
 {
     class Box
+{
+    // C#에서는 속성(Property)
+    private int width;
+    public int Width
     {
-        private int width;
-        private int height;
-
-        public Box(int width, int height)
+        get { return width; }
+        set
         {
-            if (width > 0 && height > 0)
+            if (value > 0)
             {
-                this.width = width;
-                this.height = height;
-            }
-            else
-            {
-                Console.WriteLine("너비와 높이는 자연수로 초기화해주세요!");
-            }
-        }
-
-        public int getWidth()
-        {
-            return width;
-        }
-        public int getHeight()
-        {
-            return height;
-        }
-
-        public void setWidtht(int width)
-        {
-            if (height > 0)
-            {
-                this.width = width;
+                width = value;
             }
             else
             {
                 Console.WriteLine("너비를 자연수로 초기화해주세요!");
             }
         }
-        public void setHeight(int height)
+    }
+    private int height;
+    public int Heigth
+    {
+        get { return height; }
+        set
         {
-            if (height > 0)
+            if (value > 0)
             {
-                this.height = height;
+                height = value;
             }
             else
             {
                 Console.WriteLine("높이를 자연수로 초기화해주세요!");
             }
         }
-        public int Area() { return width * height; }
+    }
+    public int Area
+    {
+        get { return Width * Heigth; }
+    }
+
+    public Box(int width, int height)
+    {
+        Width = width;
+        Heigth = height;
+    }
+
     }
 }
