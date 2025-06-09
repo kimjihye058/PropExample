@@ -19,6 +19,13 @@ namespace PropExample
 
             // 팩토리 메서드 패턴 - private 생성자 사용
             Product p = Product.getInstance("라떼", 2000);
+
+            // 정적 생성자 예시1Add commentMore actions
+            Console.WriteLine("첫 번째 위치");
+            Console.WriteLine(Sample.value);        // Sample.value 값 조회 전에 생성자 호출
+            Console.WriteLine("두 번째 위치");
+            Sample sample = new Sample();
+            Console.Write("세 번째 위치");
         }
 
         //// 오버로딩 주의점
