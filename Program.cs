@@ -33,6 +33,18 @@ namespace PropExample
             Console.WriteLine("두 번째 위치");
             Console.WriteLine(Sample.value);
             Console.WriteLine("세 번째 위치");
+
+            Item item1 = new Item("고구마", 1500);
+            Item item2 = new Item("감자", 1500);
+            Item item3 = new Item("옥수수", 1500);
+            Item item4 = new Item("토란", 1500);
+            Console.WriteLine(item1.id);
+            // item1.id = 11;
+            Console.WriteLine(item2.id);
+            Console.WriteLine(item3.id);
+            Console.WriteLine(item4.id);
+
+            Console.WriteLine(Item.ApplicationName);
         }
 
         //// 오버로딩 주의점
