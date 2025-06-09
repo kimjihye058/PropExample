@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PropExample
 {
-    internal class SampleAdd
+    internal class Sample
     {
         public static int value;
         static Sample()
         {
             value = 10;
-            Console.Write("정적 생성자 호출");
+            Console.WriteLine("정적 생성자 호출");
         }
     }
 }
